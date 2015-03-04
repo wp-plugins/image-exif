@@ -27,7 +27,7 @@ Place folder in your /wp-content/plugins/ directory and activate through the adm
 
 == Changelog ==
 
-=0.1.1=
+= 0.1.1 =
 fix issue that when image don't have exif information
 
 = 0.1.0 =
