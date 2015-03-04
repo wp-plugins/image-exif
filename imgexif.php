@@ -40,9 +40,9 @@ function read_exif($img_file){
 			'Camera'=>read_value($exif,'Model'),
 			'Make'=>read_value($exif,'Make'),
 			'Lens'=>read_value($exif,'UndefinedTag:0xA434'),
-			'FocalLength'=>str_replace('/1', 'mm', read_value($exif,'FocalLength')) ,
+			'FocalLength'=>read_value($exif,'FocalLength') ,
 			'ExposureTime'=>read_value($exif,'ExposureTime'),
-			'FNumber'=> str_replace('/1', '', read_value($exif,'FNumber')),
+			'FNumber'=> read_value($exif,'FNumber'),
 			'ISOSpeedRatings'=>read_value($exif,'ISOSpeedRatings'),
 		);
 	
@@ -55,6 +55,22 @@ function read_value($exif,$key){
 		return "";
 	}
 	else{
+
+		if($key == "FocalLength" || $key == "FNumber"){
+			if(strpos($value, '/') !== FALSE)
+			{
+				list($a, $b) = explode('/',$value);
+				$value = $a / $b; 
+			}
+
+			if($key == "FocalLength"){
+				$value .= 'mm';
+			}
+			if($key == "FNumber"){
+				$value = 'f' . $value;
+			}
+		}
+
 		return $value;
 	}
 }
