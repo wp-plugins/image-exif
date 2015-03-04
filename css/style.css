@@ -55,12 +55,16 @@
 }
 
 #imgDialog .imgexif-info .exif-desc{
-	font-size: 12px;
 	width:100px;
 	float: left;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
 }
 #imgDialog .imgexif-info .exif-value{
-	font-size: 12px;
 	width:210px;
 	float: right;
+	font-size: 12px;
+	height: 25px;
+	line-height: 25px;
 }

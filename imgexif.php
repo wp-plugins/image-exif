@@ -37,16 +37,26 @@ function read_exif($img_file){
 		$exif = exif_read_data($img_file, 'EXIF');
 
 		$exif_ = array (
-			'Camera'=>$exif['Model'],
-			'Make'=>$exif['Make'],
-			'Lens'=>$exif['UndefinedTag:0xA434'],
-			'FocalLength'=>str_replace('/1', 'mm', $exif['FocalLength']) ,
-			'ExposureTime'=>$exif['ExposureTime'],
-			'FNumber'=>'f/' . str_replace('/1', '', $exif['FNumber']),
-			'ISOSpeedRatings'=>$exif['ISOSpeedRatings'],
+			'Camera'=>read_value($exif,'Model'),
+			'Make'=>read_value($exif,'Make'),
+			'Lens'=>read_value($exif,'UndefinedTag:0xA434'),
+			'FocalLength'=>str_replace('/1', 'mm', read_value($exif,'FocalLength')) ,
+			'ExposureTime'=>read_value($exif,'ExposureTime'),
+			'FNumber'=> str_replace('/1', '', read_value($exif,'FNumber')),
+			'ISOSpeedRatings'=>read_value($exif,'ISOSpeedRatings'),
 		);
 	
 	return json_encode($exif_);
+}
+
+function read_value($exif,$key){
+	$value = $exif[$key];
+	if(is_null($value)){
+		return "";
+	}
+	else{
+		return $value;
+	}
 }
 
 add_action('wp_ajax_exif', 'get_exif');

@@ -12,11 +12,12 @@ This is a plugin that will show exif information for your image.
 
 == Description ==
 
-This is a plugin that will show exif information for your image.
+Some images taken by DSLR or phone have many exif information such as Lens, ISO, Exposure.
+This plugin will display a dialog contain the original image with exif information.
 
 == Installation ==
 
-1. Place folder in your /wp-content/plugins/ directory and activate through the administration panel
+Place folder in your /wp-content/plugins/ directory and activate through the administration panel
 
 == Frequently Asked Questions ==
 
@@ -26,5 +27,8 @@ This is a plugin that will show exif information for your image.
 
 == Changelog ==
 
-= 0.1 =
+=0.1.1=
+fix issue that when image don't have exif information
+
+= 0.1.0 =
 This is the first version of this plugin, only popup a dialog to show the exif of the image.

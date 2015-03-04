@@ -11,7 +11,6 @@ jQuery(document).ready(function($){
 
 			dialog.find(".imgexif-image").append("<img src='" + _this.attr("href") + "' />");
 
-			//TODO close
 			$("<div class='imgexif-close'></div>")
 				.appendTo(dialog.find(".imgexif-title"))
 				.bind("click",function(){
