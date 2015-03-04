@@ -28,6 +28,9 @@ Place folder in your /wp-content/plugins/ directory and activate through the adm
 
 == Changelog ==
 
+= 0.2.1 =
+fix version issue
+
 = 0.2.0 =
 support other DSLR Sony/Nikon pictures
 
