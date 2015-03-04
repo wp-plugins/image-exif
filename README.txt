@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: celery94
-Donate link: http://www.celeryliu.com/
+Donate link: http://www.celeryliu.com/image-exif/
 Tags: image, exif
 Requires at least: 4.1
 Tested up to: 4.1
