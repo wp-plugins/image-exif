@@ -28,6 +28,9 @@ Place folder in your /wp-content/plugins/ directory and activate through the adm
 
 == Changelog ==
 
+= 0.2.2 =
+ignore thumbnail
+
 = 0.2.1 =
 fix version issue
 

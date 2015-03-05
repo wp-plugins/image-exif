@@ -1,6 +1,12 @@
+
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
 jQuery(document).ready(function($){
 
 	$("article.post a > img").each(function(){
+		if($(this).hasClass("wp-post-image")) return;
 
 		var _this = $(this).parent();
 

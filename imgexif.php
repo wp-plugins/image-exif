@@ -3,7 +3,7 @@
 Plugin Name: Image Exif
 Plugin URI: http://www.celeryliu.com
 Description: This is a plugin that will show exif information for your image.
-Version: 0.2.1
+Version: 0.2.2
 Author: Celery Liu
 Author URI: http://www.celeryliu.com
 License: GPL2
